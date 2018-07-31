@@ -43,14 +43,15 @@ class HelloWorld extends Component {
   renderStoreItem = ({ item }) => {
     return (
       <View style={{
-        width: width(25), height: width(25), backgroundColor: 'white', margin: height(2), alignItems: 'center', justifyContent: 'center', shadowColor: "black", alignSelf: 'center',
+        width: width(29), height: width(29), backgroundColor: 'white', margin: height(1), alignItems: 'center', justifyContent: 'center', shadowColor: "black", alignSelf: 'center',
         shadowOffset: { height: height(1) },
         shadowRadius: height(0.5),
         borderRadius: height(1),
         elevation: 5,
         shadowOpacity: 0.5
       }}>
-        <Image source={item.linkImage} style={{ width: width(25), height: width(25), alignSelf: 'center', borderRadius: height(1) }} resizeMode='contain' />
+        <Image source={item.linkImage} style={{ width: width(23), height: width(23), alignSelf: 'center', borderRadius: height(1) }} resizeMode='contain' />
+        <Text style={{ color: 'gray', alignSelf: 'center', alignItems :'center' ,justifyContent :'flex-end', fontSize: width(2.6) , position :'absolute', bottom : height(0.1) }}>{item.title}</Text>
       </View>
     )
   }
@@ -73,10 +74,7 @@ class HelloWorld extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground
-          source={require('./images/background8.jpg')}
-          style={styles.imgBackground}
-        >
+       
           <View style={{ height: height(25) }}>
             <Carousel
               ref={(c) => { this._carousel = c; }}
@@ -98,6 +96,10 @@ class HelloWorld extends Component {
             />
 
           </View>
+        <ImageBackground
+          source={require('./images/background8.jpg')}
+          style={styles.imgBackground}
+        >
           <ScrollableTabView
             initialPage={0}
             renderTabBar={() => <DefaultTabBar />}>
@@ -109,6 +111,7 @@ class HelloWorld extends Component {
             </View>
           </ScrollableTabView>
         </ImageBackground>
+        
       </View>
     );
   }
@@ -116,7 +119,8 @@ class HelloWorld extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+     height : height(100),
+     width : width(100),
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',

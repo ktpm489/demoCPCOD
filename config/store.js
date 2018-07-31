@@ -40,12 +40,12 @@ const store = [
         "linkImage": require('../images/stores/ebates.jpeg')
     },
     {
-        "title": 'FreeShipping Coupons',
+        "title": 'Free Shipping ',
         "link": 'http://www.freeshipping.org/',
         "linkImage": require('../images/stores/freeshipping.jpeg')
     },
     {
-        "title": 'Free Shopping Coupons',
+        "title": 'Free Shopping ',
         "link": 'http://freeshopping.co/',
         "linkImage": require('../images/stores/freeshopping.png')
     },
@@ -100,7 +100,7 @@ const store = [
         "linkImage": require('../images/stores/shesaved.com.png')
     },
     {
-        "title": 'Shop At Home Coupon',
+        "title": 'Shop At Home',
         "link": 'https://www.shopathome.com/',
         "linkImage": require('../images/stores/shopathome.png')
     },
