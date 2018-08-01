@@ -6,22 +6,40 @@ import {
   View,
   Image,
   ImageBackground,
+  TouchableOpacity,
   FlatList
 } from 'react-native';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view'
 import { width, height } from 'react-native-dimension'
 import Carousel from 'react-native-snap-carousel';
 import store from './config/store'
+// const images = [
+//   require('./images/images1.jpeg'),
+//   require('./images/images2.jpeg'),
+//   require('./images/images3.jpeg'),
+//   require('./images/images4.jpeg'),
+//   require('./images/images5.jpeg'),
+//   require('./images/images6.jpeg'),
+//   require('./images/images7.jpg'),
+//   require('./images/images8.jpeg'),
+//   require('./images/images9.jpg'),
+//   require('./images/images10.jpg')
+// ]
 const images = [
-  require('./images/images1.jpeg'),
-  require('./images/images2.jpeg'),
-  require('./images/images3.jpeg'),
-  require('./images/images4.jpeg'),
+  require('./images/gif1.gif'),
+  require('./images/gif2.gif'),
+  require('./images/gif3.gif'),
+  require('./images/gif4.gif'),
   require('./images/images5.jpeg'),
   require('./images/images6.jpeg'),
   require('./images/images7.jpg'),
   require('./images/images8.jpeg'),
-  require('./images/images9.jpg'),
+  require('./images/gif5.gif'),
+  require('./images/gif6.gif'),
+  require('./images/gif7.gif'),
+  require('./images/gif8.gif'),
+  require('./images/gif9.gif'),
+  require('./images/gif10.gif'),
   require('./images/images10.jpg')
 ]
 const centerIndex = Math.round(images.length / 2);
@@ -32,7 +50,7 @@ class HelloWorld extends Component {
   _renderItem({ item, index }) {
     return (
       <View style={styles.slider}>
-        <Image source={item} style={{ width: width(100), height: height(23) }} resizeMode={'cover'} />
+        <Image source={item} style={{ width: width(100), height: height(20) }} resizeMode={'cover'} />
       </View>
     );
   }
@@ -42,23 +60,22 @@ class HelloWorld extends Component {
 
   renderStoreItem = ({ item }) => {
     return (
-      <View style={{
+      <TouchableOpacity style={{
         width: width(29), height: width(29), backgroundColor: 'white', margin: height(1), alignItems: 'center', justifyContent: 'center', shadowColor: "black", alignSelf: 'center',
         shadowOffset: { height: height(1) },
         shadowRadius: height(0.5),
         borderRadius: height(1),
         elevation: 5,
         shadowOpacity: 0.5
-      }}>
+      }}   onPress ={() =>this.onPressStoreItem(item.link)}>
         <Image source={item.linkImage} style={{ width: width(23), height: width(23), alignSelf: 'center', borderRadius: height(1) }} resizeMode='contain' />
         <Text style={{ color: 'gray', alignSelf: 'center', alignItems :'center' ,justifyContent :'flex-end', fontSize: width(2.6) , position :'absolute', bottom : height(0.1) }}>{item.title}</Text>
-      </View>
+      </TouchableOpacity>
     )
   }
   // TODO check number image  depend on width
   renderStoreData = () => {
     return (
-      <View style={{ marginBottom: height(5) }}>
         <FlatList
           data={store}
           contentInsetAdjustmentBehavior={'automatic'}
@@ -67,15 +84,18 @@ class HelloWorld extends Component {
           renderItem={this.renderStoreItem}
           keyExtractor={(item, index) => index.toString()}
         />
-      </View>
     )
+  }
+
+  onPressStoreItem = (link) => {
+    console.log('item Data', link)
   }
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, { backgroundColor :'transparent' }]}>
        
-          <View style={{ height: height(25) }}>
+          <View style={{ height: height(20) }}>
             <Carousel
               ref={(c) => { this._carousel = c; }}
               data={images}
@@ -84,7 +104,7 @@ class HelloWorld extends Component {
               itemWidth={width(100)}
               loop={true}
               autoplay={true}
-              autoplayInterval={3000}
+              autoplayInterval={5000}
               inactiveSlideScale={0.94}
               inactiveSlideOpacity={0.7}
               containerCustomStyle={styles.slider}
@@ -102,6 +122,10 @@ class HelloWorld extends Component {
         >
           <ScrollableTabView
             initialPage={0}
+            style={{ backgroundColor :'transparent'}}
+            tabBarUnderlineStyle={{ height :1 }}
+          //  tabBarBackgroundColor={{ backgroundColor :'transparent'}}
+           // tabBarTextStyle={{ fontSize: width(4.5), color:'#4195f4' }}
             renderTabBar={() => <DefaultTabBar />}>
             <View tabLabel='COUPONS'>
               <Text>{'COUPONS'}</Text>
