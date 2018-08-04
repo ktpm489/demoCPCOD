@@ -13,6 +13,7 @@ import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-vi
 import { width, height } from 'react-native-dimension'
 import Carousel from 'react-native-snap-carousel';
 import store from './config/store'
+import coupons  from './config/coupons'
 // const images = [
 //   require('./images/images1.jpeg'),
 //   require('./images/images2.jpeg'),
@@ -73,7 +74,6 @@ class HelloWorld extends Component {
       </TouchableOpacity>
     )
   }
-  // TODO check number image  depend on width
   renderStoreData = () => {
     return (
         <FlatList
@@ -89,6 +89,42 @@ class HelloWorld extends Component {
 
   onPressStoreItem = (link) => {
     console.log('item Data', link)
+  }
+
+
+  renderCouponItem = ({ item }) => {
+    console.log('Coupon Item', item)
+    return (
+      <TouchableOpacity style={{
+        width: width(29), height: width(29), backgroundColor: 'white', margin: height(1), alignItems: 'center', justifyContent: 'center', shadowColor: "black", alignSelf: 'center',
+        shadowOffset: { height: height(1) },
+        shadowRadius: height(0.5),
+        borderRadius: height(1),
+        elevation: 5,
+        shadowOpacity: 0.5
+      }} onPress={() => this.onPressCounponItem(item)}>
+        <Image source={item.link} style={{ width: width(23), height: width(23), alignSelf: 'center', borderRadius: height(1) }} resizeMode='contain' />
+        <Text style={{ color: 'gray', alignSelf: 'center', alignItems: 'center', justifyContent: 'flex-end', fontSize: width(2.6), position: 'absolute', bottom: height(0.1) }}>{item.title}</Text>
+      </TouchableOpacity>
+    )
+  }
+
+  onPressCounponItem = ( item ) => {
+    console.log('Counpon Item', item)
+  }
+
+
+  renderCouponsData = () => {
+    return (
+      <FlatList
+        data={coupons}
+        contentInsetAdjustmentBehavior={'automatic'}
+        contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center' }}
+        numColumns={3}
+        renderItem={this.renderCouponItem}
+        keyExtractor={(item, index) => index.toString()}
+      />
+    )
   }
 
   render() {
@@ -128,7 +164,7 @@ class HelloWorld extends Component {
            // tabBarTextStyle={{ fontSize: width(4.5), color:'#4195f4' }}
             renderTabBar={() => <DefaultTabBar />}>
             <View tabLabel='COUPONS'>
-              <Text>{'COUPONS'}</Text>
+              {this.renderCouponsData()}
             </View>
             <View tabLabel='STORES'>
               {this.renderStoreData()}
