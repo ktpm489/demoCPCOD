@@ -1,14 +1,35 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
+import { View, Text, StyleSheet ,Image, FlatList, TouchableOpacity } from 'react-native';
+import { width, height} from 'react-native-dimension'
+import coupons from '../config/coupons'
 // create a component
+
 class MyClass extends Component {
+
+    pressItem = (url) =>{
+        console.log('Item link' ,url)
+    }
+
+    renderItem = ({item}) =>{
+        return (
+            <TouchableOpacity style={styles.containerItem} onPress={() => this.pressItem(item.url)}>
+                <Image source={item.link} style={styles.img} resizeMode='contain' />
+                <Text style={styles.text} numberOfLines={2}>{item.name}</Text>
+            </TouchableOpacity>
+        )
+
+    }
+
     render() {
         return (
-            <View style={styles.container}>
-                <Text>MyClass</Text>
-            </View>
+            <FlatList
+                data={coupons[0].data}
+                contentInsetAdjustmentBehavior={'automatic'}
+                contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center', marginVertical : height(1) }}
+                renderItem={this.renderItem}
+                keyExtractor={(item, index) => index.toString()}
+            />
         );
     }
 }
@@ -19,8 +40,35 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: 'white',
     },
+    containerItem : {
+        borderColor: 'gray',
+        alignItems: 'center',
+        padding : width(1),
+        width : width(90),
+        marginVertical: height(1),
+       // flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        borderStyle: 'dotted',
+        borderWidth: 1,
+        borderRadius: 1,
+        position: 'relative',
+    },
+     text: {
+         color: 'gray',
+        alignContent: 'center',
+        fontSize:  width(4.5),
+        paddingLeft: width(4),
+        alignSelf: 'center',
+        justifyContent :'center',
+    },
+    img : {
+        width: width(20), height: width(20), backgroundColor: 'white',
+        marginLeft:  width(1),
+        alignSelf: 'center',
+    }
 });
 
 //make this component available to the app
