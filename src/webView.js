@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import { View, StyleSheet, StatusBar, Text } from 'react-native'
 import WebView from 'react-native-android-fullscreen-webview-video'
 // https://m.youtube.com/
+
 class ReactWebView extends Component {
+
+    setWebViewUrlChanged = (webViewState) => {
+        console.log('webviewState', webviewState.url)
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -16,6 +22,7 @@ class ReactWebView extends Component {
                     allowUniversalAccessFromFileURLs={true}
                     mixedContentMode={'compatibility'}
                     startInLoadingState={true}
+                    onNavigationStateChange={this.setWebViewUrlChanged}
                     source={{ uri: 'https://www.frugaa.com/promo/clothing/' }} />
             </View>
         )

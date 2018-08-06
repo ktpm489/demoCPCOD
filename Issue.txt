@@ -1,0 +1,5 @@
+
+https://medium.com/@andrei.pfeiffer/reset-react-native-webview-to-initial-url-b57aad9442a0
+https://medium.com/@relferreira/react-native-redux-react-navigation-ecec4014d648
+https://stackoverflow.com/questions/40591090/403-error-thats-an-error-error-disallowed-useragent
+https://stackoverflow.com/questions/36590207/set-user-agent-with-webview-with-react-native
