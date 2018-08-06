@@ -3,6 +3,7 @@ package com.coupons24htrending;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.airship.customwebview.CustomWebViewPackage;
 import dk.madslee.imageSequence.RCTImageSequencePackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNDeviceInfo(),
             new CustomWebViewPackage(),
             new RCTImageSequencePackage()
       );
