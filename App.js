@@ -23,10 +23,33 @@ const Stack = StackNavigator({
     }
   },
   Detail: {
-    screen: CounponsDetail
+    screen: CounponsDetail,
+    navigationOptions: {
+      title: 'COUPONS 24H TRENDING',
+      headerStyle: {
+        backgroundColor: '#BDD9F2',
+      },
+      headerTintColor: '#000087',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: width(4.5),
+      },
+    }
+    
   },
   WebView : {
-    screen : WebView
+    screen : WebView,
+    navigationOptions: {
+      title: 'COUPONS 24H TRENDING',
+      headerStyle: {
+        backgroundColor: '#BDD9F2',
+      },
+      headerTintColor: '#000087',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: width(4.5),
+      },
+    }
   }
 });
 

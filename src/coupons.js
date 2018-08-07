@@ -55,9 +55,7 @@ class HelloWorld extends Component {
       </View>
     );
   }
-  componentWillMount() {
-    console.log('store', store)
-  }
+
 
   renderStoreItem = ({ item }) => {
     return (
@@ -88,7 +86,15 @@ class HelloWorld extends Component {
   }
 
   onPressStoreItem = (link) => {
-    console.log('item Data', link)
+    console.log('item Data', link, 'props' )
+    // this.props.param('WebView',
+    //   {
+    //     link : link,
+    //     title: 'Test'
+    //   }
+    // )
+    this.props.navigation.push('WebView', { link : link })
+    
   }
 
 
@@ -111,6 +117,7 @@ class HelloWorld extends Component {
 
   onPressCounponItem = ( item ) => {
     console.log('Counpon Item', item)
+    this.props.navigation.push('Detail', { itemData : item })
   }
 
 

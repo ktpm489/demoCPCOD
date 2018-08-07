@@ -9,13 +9,16 @@ class ReactWebView extends Component {
     constructor(props){
         super(props)
         this.state = {
-            webViewState : ''
+            webViewState : '',
+            link: this.props.navigation.state.params.link || 'https://www.frugaa.com'
         }
     }
 
     componentDidMount() {
-        const { link } = this.props
-        console.log('Device Info', DeviceInfo.getUserAgent())
+       
+        const { link } = this.props.navigation.state.params 
+        this.setState({ link : link })
+       // console.log('Device Info', DeviceInfo.getUserAgent(), 'link', link)
 
     }
 
@@ -24,6 +27,7 @@ class ReactWebView extends Component {
     }
 
     render() {
+        const { link } = this.state
         return (
             <View style={styles.container}>
                 <StatusBar hidden={true} />
@@ -38,7 +42,7 @@ class ReactWebView extends Component {
                     mixedContentMode={'compatibility'}
                     startInLoadingState={true}
                     onNavigationStateChange={this.setWebViewUrlChanged}
-                    source={{ uri: 'https://www.frugaa.com/promo/clothing/' }} />
+                    source={{ uri: link }} />
             </View>
         )
     }

@@ -7,8 +7,9 @@ import coupons from '../config/coupons'
 
 class MyClass extends Component {
 
-    pressItem = (url) =>{
-        console.log('Item link' ,url)
+    pressItem = (link) =>{
+        console.log('Item link', link)
+        this.props.navigation.push('WebView', { link: link })
     }
 
     renderItem = ({item}) =>{
@@ -22,9 +23,11 @@ class MyClass extends Component {
     }
 
     render() {
+       const { itemData } = this.props.navigation.state.params 
+       console.log('itemData', itemData )
         return (
             <FlatList
-                data={coupons[0].data}
+                data={itemData.data}
                 contentInsetAdjustmentBehavior={'automatic'}
                 contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center', marginVertical : height(1) }}
                 renderItem={this.renderItem}
