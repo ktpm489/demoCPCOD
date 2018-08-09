@@ -14,6 +14,8 @@ import { width, height } from 'react-native-dimension'
 import Carousel from 'react-native-snap-carousel';
 import store from '../config/store'
 import coupons  from '../config/coupons'
+import email from 'react-native-email'
+import { showRatingApp } from './globalFunctions'
 // const images = [
 //   require('./images/images1.jpeg'),
 //   require('./images/images2.jpeg'),
@@ -134,6 +136,37 @@ class HelloWorld extends Component {
     )
   }
 
+  handleEmail = async () => {
+    // await this.openUrl('mailto:ktpm489@gmail.com')
+    const to = ['ktpm489@gmail.com'] // string or array of email addresses
+    email(to, {
+      subject: 'Feedback Coupons 24h Trending App',
+      body: 'Would you mind giving us some feedback?'
+    }).catch(console.error)
+  }
+
+  ratingApp = () => {
+    showRatingApp()
+  }
+
+  renderSettingsData = () => {
+    return(
+      <View>
+      <TouchableOpacity style={{ backgroundColor: '#D9D9D9', padding: 3, marginTop: 6 }}>
+        <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+          Send Feedback
+            </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ backgroundColor: '#D9D9D9', padding: 3, marginTop: 6 }}>
+        <Text style={[styles.text, styles.headingText]} onPress={this.ratingApp}>
+          Rating App
+            </Text>
+      </TouchableOpacity>
+      </View>
+    )
+    
+  }
+
   render() {
     return (
       <View style={[styles.container, { backgroundColor :'transparent' }]}>
@@ -177,7 +210,7 @@ class HelloWorld extends Component {
               {this.renderStoreData()}
             </View>
             <View tabLabel='SETTINGS' style={styles.itemMainContainer}>
-              {<Text>Settings</Text>}
+              {this.renderSettingsData()}
             </View>
           </ScrollableTabView>
         </ImageBackground>
@@ -275,7 +308,16 @@ const styles = StyleSheet.create({
   },
   itemMainContainer: {
      height: height(63)
-  }
+  },
+  text: {
+    color: '#444444'
+  },
+  headingText: {
+    fontSize: 18,
+    fontWeight: '300',
+    paddingTop: 6,
+    paddingBottom: 6
+  },
 });
 
 export default HelloWorld
