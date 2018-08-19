@@ -5,6 +5,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 import HomeView from './src/coupons'
 import CounponsDetail from './src/couponsDetail'
 import WebView from './src/webView'
+// import WebView from './src/webViewBK'
 import { width} from 'react-native-dimension'
 import { StackNavHeaderStyles } from './styles/styles'
 const Stack = StackNavigator({
@@ -19,6 +20,8 @@ const Stack = StackNavigator({
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: width(4.5),
+        width: '100%',
+        textAlign: 'center', alignSelf: 'center', justifyContent: "center"
       },
     }
   },
@@ -33,6 +36,8 @@ const Stack = StackNavigator({
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: width(4.5),
+        width: '100%',
+        textAlign: 'center', alignSelf: 'center', justifyContent: "center",
       },
     }
     
@@ -47,7 +52,9 @@ const Stack = StackNavigator({
       headerTintColor: '#000087',
       headerTitleStyle: {
         fontWeight: 'bold',
+        width: '100%',
         fontSize: width(4.5),
+        textAlign: 'center', alignSelf: 'center', justifyContent: "center"
       },
     }
   }

@@ -7,7 +7,8 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  FlatList
+  FlatList,
+  Platform
 } from 'react-native';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view'
 import { width, height } from 'react-native-dimension'
@@ -46,8 +47,7 @@ const images = [
   require('../images/images10.jpg')
 ]
 const centerIndex = Math.round(images.length / 2);
-
-
+const ISIOS = Platform.OS === 'ios' 
 class HelloWorld extends Component {
 
   _renderItem({ item, index }) {
@@ -152,16 +152,23 @@ class HelloWorld extends Component {
   renderSettingsData = () => {
     return(
       <View>
-      <TouchableOpacity style={{ backgroundColor: '#D9D9D9', padding: 3, marginTop: 6 }}>
+        <View style={styles.settingItem}>
+          <Image source={require('../images/others/share.png')} style={styles.settingImg} resizeMode={'contain'} />
+      <TouchableOpacity style={{ backgroundColor: 'transparent', padding: 3}}>
+       
         <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
           Send Feedback
             </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor: '#D9D9D9', padding: 3, marginTop: 6 }}>
+        </View>
+        <View style={styles.settingItem}>
+          <Image source={require('../images/others/star.png')} style={styles.settingImg} resizeMode={'contain'} />
+        <TouchableOpacity style={{ backgroundColor: 'transparent', padding: 3 }}>
         <Text style={[styles.text, styles.headingText]} onPress={this.ratingApp}>
           Rating App
             </Text>
       </TouchableOpacity>
+      </View>
       </View>
     )
     
@@ -307,7 +314,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   itemMainContainer: {
-     height: height(63)
+    // IOS : 63
+    height: height(ISIOS ? 63: 70)
   },
   text: {
     color: '#444444'
@@ -318,6 +326,12 @@ const styles = StyleSheet.create({
     paddingTop: 6,
     paddingBottom: 6
   },
+  settingItem : {
+    flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingLeft: width(3) 
+  },
+  settingImg : {
+    width: width(5), height: height(5), alignSelf: 'center', marginRight: width(1) 
+  }
 });
 
 export default HelloWorld
