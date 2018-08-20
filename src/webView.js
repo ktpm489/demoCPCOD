@@ -18,7 +18,7 @@ class ReactWebView extends Component {
         headerRight:
             (
                 <TouchableOpacity style={{ width: width(10), height: width(10), alignItems: 'center', justifyContent: 'center' }} onPress={navigation.state.params.handleSave} >
-                    <Image source={require('../images/others/threeDot.png')} resizeMode='cover' style={{ tintColor: '#4195f4' }} />
+                    <Image source={require('../images/others/threeDot.png')} resizeMode='cover' style={{ tintColor: '#00008D' }} />
                 </TouchableOpacity>
             )
 
