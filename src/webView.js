@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, StatusBar, Text, ActivityIndicator, Dimensions, Button, TouchableOpacity, Image, CameraRoll, Share, Alert, PermissionsAndroid, Platform } from 'react-native'
+import { View, StyleSheet, StatusBar, Text, ActivityIndicator, Dimensions, Button, TouchableOpacity, Image, CameraRoll, Share, Alert, PermissionsAndroid, Platform
+    , Modal, TouchableHighlight, TouchableWithoutFeedback
+} from 'react-native'
 import WebView from 'react-native-android-fullscreen-webview-video'
 import DeviceInfo from 'react-native-device-info'
 import { width, height } from 'react-native-dimension'
 import { calculateRating } from './globalFunctions'
 import ViewShot from 'react-native-view-shot'
+import PopupDialog from 'react-native-popup-dialog';
 // https://m.youtube.com/
 const USER_AGENT = "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
 const ISIOS = Platform.OS === 'ios'
@@ -28,19 +31,30 @@ class ReactWebView extends Component {
         this.state = {
             webViewState: '',
             link: this.props.navigation.state.params.link || 'https://www.frugaa.com',
-            visible: true
+            visible: true,
+            modalVisible : false
         }
     }
+
+
 
 
     setRefs = (ref) => { this.viewShot = ref }
 
     saveDetails =  async () => {
+        this.popupDialog.show(() => {
+            console.log('callback - will be called immediately')
+        });
+       // this.setModalVisible(!this.state.modalVisible);
+
         // alert('Save Details');
        // Alert.alert('Hello alert')
-       await this.pressSaveImg()
+      // await this.pressSaveImg()
     }
 
+    setModalVisible(visible) {
+        this.setState({ modalVisible: visible})
+    }
 
     hideSpinner() {
         this.setState({ visible: false })
@@ -114,14 +128,65 @@ class ReactWebView extends Component {
         }
      
     }
-
+    closePopup = () => {
+        this.popupDialog.dismiss(() => {
+            console.log('callback - will be called immediately')
+        });
+    }
 
 
     render() {
         const { link } = this.state
         const { setRefs } = this
         return (
+            <TouchableWithoutFeedback onPress={this.closePopup}>
             <View style={styles.container}>
+               
+                {/* <Modal
+                    animationType="fade"
+                    transparent={true}
+                    visible={this.state.modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert('Modal has been closed.');
+                    }}>
+                    <View style = {styles.modal} opacity={1}>
+                        <TouchableOpacity style={{ backgroundColor: 'transparent', padding: 3 }}>
+
+                            <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+                                Send Feedback
+                             </Text>
+                        </TouchableOpacity>
+                  
+                        <TouchableOpacity onPress={() => {
+                            this.setModalVisible(!this.state.modalVisible);
+                        }}>
+                     
+                     <Text style = {styles.text}>Close Modal</Text>
+                        </TouchableOpacity>
+               </View>
+                </Modal> */}
+                <PopupDialog
+                        ref={(popupDialog) => { this.popupDialog = popupDialog; }} overlayOpacity={0.5}
+                        dialogStyle={{ marginHorizontal : width(10) }}
+                        >
+                        <View style={styles.dialogContentView}>
+                            <TouchableOpacity style={styles.btnDialog}>
+                            <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+                                Save ScreenShoot
+                             </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.btnDialog}>
+                                <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+                                Send link to social network
+                             </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.btnDialog}>
+                                <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+                                    Close Dialog
+                             </Text>
+                            </TouchableOpacity>
+                        </View>
+                </PopupDialog>
                 <ViewShot ref={setRefs} options={{ format: 'jpg', quality: 1 }} style={styles.viewShot} collapsable={false}>
                     <StatusBar hidden={true} />
                     <WebView
@@ -144,13 +209,17 @@ class ReactWebView extends Component {
                     />
                 )} */}
                 </ViewShot>
+               
             </View>
+            </TouchableWithoutFeedback>
         )
     }
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        alignItems :'center',
+        justifyContent :'center'
     },
     viewShot: {
         backgroundColor: 'transparent',
@@ -160,7 +229,38 @@ const styles = StyleSheet.create({
        // justifyContent: 'center',
         //flex: 1
          height: height(100)
+    }, 
+    modal: {
+        width: width(100),
+        height: height(20),
+        marginTop : height(10),
+        alignItems: 'center',
+        justifyContent :'center',
+        backgroundColor: 'gray',
+        alignSelf: 'center',
+       // padding: 100
     },
+    text: {
+        color: '#3f2949',
+        //marginTop: 10
+    },
+    headingText: {
+        fontSize: width(5),
+        fontWeight: 'bold',
+        
+    },
+    dialogContentView: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    btnDialog : {
+        backgroundColor: 'transparent', borderStyle: 'dotted',
+        marginVertical: height(2),
+        width: width(80),
+        height: height(6),
+        paddingHorizontal: width(4), paddingVertical: height(0.3), borderColor: 'red', borderWidth: width(0.3), alignItems: 'center', justifyContent: 'center', borderRadius: width(1)
+    }
 })
 
 export default ReactWebView
