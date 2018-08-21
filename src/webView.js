@@ -134,6 +134,24 @@ class ReactWebView extends Component {
         });
     }
 
+    saveScreenShot = async  () => {
+        this.closePopup()
+        await this.pressSaveImg()
+    }
+    shareSocialNetwork = () => {
+        this.closePopup()
+        Share.share({
+            message: 'Share link webiste with your friend',
+            url: this.state.link,
+            title: 'Wow, did you see that?'
+        }).then(result => console.log(result)).catch(errorMsg => console.log(errorMsg));
+
+    }
+    closeDialog = () => {
+        this.popupDialog.dismiss(() => {
+            console.log('callback - will be called immediately')
+        });
+    }
 
     render() {
         const { link } = this.state
@@ -171,17 +189,17 @@ class ReactWebView extends Component {
                         >
                         <View style={styles.dialogContentView}>
                             <TouchableOpacity style={styles.btnDialog}>
-                            <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+                                <Text style={[styles.text, styles.headingText]} onPress={this.saveScreenShot}>
                                 Save ScreenShoot
                              </Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.btnDialog}>
-                                <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
-                                Send link to social network
+                                <Text style={[styles.text, styles.headingText]} onPress={this.shareSocialNetwork}>
+                                Share Link Social Network
                              </Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.btnDialog}>
-                                <Text style={[styles.text, styles.headingText]} onPress={this.handleEmail}>
+                                <Text style={[styles.text, styles.headingText]} onPress={this.closeDialog}>
                                     Close Dialog
                              </Text>
                             </TouchableOpacity>
