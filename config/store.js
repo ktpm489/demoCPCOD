@@ -5,11 +5,6 @@ const store = [
         "linkImage" : require('../images/stores/amazon.jpeg')
     },
     {
-        "title": 'CashKaro Coupons',
-        "link": 'https://cashkaro.com/',
-        "linkImage": require('../images/stores/cashkaro.jpeg')
-    },
-    {
         "title": 'Coupon Dunia',
         "link": 'https://www.coupondunia.in/',
         "linkImage": require('../images/stores/coupondunia.png')
@@ -118,6 +113,11 @@ const store = [
         "title": 'Woot Coupon',
         "link": 'https://www.woot.com/',
         "linkImage": require('../images/stores/woot.png')
-    }
+    },
+    {
+        "title": 'CashKaro Coupons',
+        "link": 'https://cashkaro.com/popular-today/trending-today/most-clicked-stores',
+        "linkImage": require('../images/stores/cashkaro.jpeg')
+    },
 ]
 export default store

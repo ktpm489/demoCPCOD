@@ -128,7 +128,7 @@ class ReactWebView extends Component {
         }
      
     }
-    closePopup = () => {
+    closePopup = async () => {
         this.popupDialog.dismiss(() => {
             console.log('callback - will be called immediately')
         });
@@ -136,10 +136,10 @@ class ReactWebView extends Component {
 
     saveScreenShot = async  () => {
         this.closePopup()
-        await this.pressSaveImg()
+        this.pressSaveImg()
     }
-    shareSocialNetwork = () => {
-        this.closePopup()
+    shareSocialNetwork = async () => {
+       await this.closePopup()
         Share.share({
             message: 'Share link webiste with your friend',
             url: this.state.link,
@@ -185,8 +185,8 @@ class ReactWebView extends Component {
                 </Modal> */}
                 <PopupDialog
                         ref={(popupDialog) => { this.popupDialog = popupDialog; }} overlayOpacity={0.5}
-                        dialogStyle={{ marginHorizontal : width(10) }}
-                        >
+                        dialogStyle={{ marginHorizontal: width(10),minHeight : height(40) }}
+                    >
                         <View style={styles.dialogContentView}>
                             <TouchableOpacity style={styles.btnDialog}>
                                 <Text style={[styles.text, styles.headingText]} onPress={this.saveScreenShot}>
