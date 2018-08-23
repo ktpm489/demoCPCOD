@@ -21,13 +21,13 @@ class ReactWebView extends Component {
                 <View style={{width : width(80), height :height(10) ,backgroundColor :'transparent' , flexDirection :'row', alignItems :'center' }}>
                 
                     <TouchableOpacity style={{ width: width(12), height: width(10), marginRight: width(8), justifyContent: 'center', alignItems: 'center' }} onPress={navigation.state.params.goBack} >
-                        <Image  source={require('../images/others/undo.png')} resizeMode='contain' style={{ tintColor: 'black', width: width(10), height: width(10) }} />
+                        <Image  source={require('../images/others/undo.png')} resizeMode='contain' style={{ tintColor: 'black', width: width(10), height: width(6) }} />
                 </TouchableOpacity>
-                    <TouchableOpacity style={{ width: width(12), height: width(10), marginHorizontal: width(6) }} onPress={navigation.state.params.refreshHome} >
-                        <Image source={require('../images/others/home.png')} resizeMode='contain' style={{ width: width(10), height: width(10),tintColor: 'black' }} />
+                    <TouchableOpacity style={{ width: width(12), height: width(10), marginHorizontal: width(6), justifyContent: 'center', alignItems: 'center' }} onPress={navigation.state.params.refreshHome} >
+                        <Image source={require('../images/others/home.png')} resizeMode='contain' style={{ width: width(10), height: width(6),tintColor: 'black' }} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ width: width(12), height: width(10), marginLeft: width(8) }} onPress={navigation.state.params.handleSave} >
-                        <Image source={require('../images/others/share.png')} resizeMode='contain' style={{ width: width(10), height: width(10), tintColor: 'black' }} />
+                    <TouchableOpacity style={{ width: width(12), height: width(10), marginLeft: width(8), justifyContent: 'center', alignItems: 'center' }} onPress={navigation.state.params.handleSave} >
+                        <Image source={require('../images/others/share.png')} resizeMode='contain' style={{ width: width(10), height: width(6), tintColor: 'black' }} />
                     </TouchableOpacity>
                 </View>
             ),
@@ -239,12 +239,14 @@ class ReactWebView extends Component {
                     <StatusBar hidden={true} />
                     <WebView
                         ref={WEBVIEW_REF}
+                        style={{ flex: 1 , width: width(100) }}
                         onLoad={() => this.hideSpinner()}
                         userAgent={DeviceInfo.getUserAgent() + " - Coupons 24h Trending - android "}
                         javaScriptEnabled={true}
                         javaScriptEnabledAndroid={true}
                         domStorageEnabled={true}
                         scalesPageToFit={true}
+                        scrollEnabled={true}
                         // nativeConfig={true}
                         allowUniversalAccessFromFileURLs={true}
                         mixedContentMode={'compatibility'}
