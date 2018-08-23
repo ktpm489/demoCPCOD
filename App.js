@@ -45,7 +45,7 @@ const Stack = StackNavigator({
   WebView : {
     screen : WebView,
     navigationOptions: {
-      title: 'COUPONS 24H TRENDING',
+    //  title: 'COUPONS 24H TRENDING',
       headerStyle: {
         backgroundColor: '#BDD9F2',
       },

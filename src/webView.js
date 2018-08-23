@@ -11,17 +11,34 @@ import PopupDialog from 'react-native-popup-dialog';
 // https://m.youtube.com/
 const USER_AGENT = "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
 const ISIOS = Platform.OS === 'ios'
+const WEBVIEW_REF = "WEBVIEW_REF";
 class ReactWebView extends Component {
     static navigationOptions = ({ navigation }) => ({
         // headerRight :( <Button title={"Share"} onPress={navigation.state.params.handleSave} />
         // )
         headerRight:
             (
-                <TouchableOpacity style={{ width: width(10), height: width(10), alignItems: 'center', justifyContent: 'center' }} onPress={navigation.state.params.handleSave} >
-                    <Image source={require('../images/others/threeDot.png')} resizeMode='cover' style={{ tintColor: '#00008D' }} />
+                <View style={{width : width(80), height :height(10) ,backgroundColor :'transparent' , flexDirection :'row', alignItems :'center' }}>
+                
+                    <TouchableOpacity style={{ width: width(12), height: width(10), marginRight: width(8), justifyContent: 'center', alignItems: 'center' }} onPress={navigation.state.params.goBack} >
+                        <Image  source={require('../images/others/undo.png')} resizeMode='contain' style={{ tintColor: 'black', width: width(10), height: width(10) }} />
                 </TouchableOpacity>
-            )
-
+                    <TouchableOpacity style={{ width: width(12), height: width(10), marginHorizontal: width(6) }} onPress={navigation.state.params.refreshHome} >
+                        <Image source={require('../images/others/home.png')} resizeMode='contain' style={{ width: width(10), height: width(10),tintColor: 'black' }} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{ width: width(12), height: width(10), marginLeft: width(8) }} onPress={navigation.state.params.handleSave} >
+                        <Image source={require('../images/others/share.png')} resizeMode='contain' style={{ width: width(10), height: width(10), tintColor: 'black' }} />
+                    </TouchableOpacity>
+                </View>
+            ),
+        // headerLeft: (
+        //     <View>
+        //     <TouchableOpacity style={{ width: width(10), height: width(10), alignItems: 'center', justifyContent: 'center' }} onPress={navigation.state.params.handleSave} >
+        //         <Image source={require('../images/others/synchonized.png')} resizeMode='cover' style={{ tintColor: '#00008D' }} />
+        //     </TouchableOpacity>
+            
+        //     </View>
+        // )   
     })
 
 
@@ -34,6 +51,7 @@ class ReactWebView extends Component {
             visible: true,
             modalVisible : false
         }
+        this.beginLink =  this.props.navigation.state.params.link || 'https://www.frugaa.com'
     }
 
 
@@ -59,10 +77,13 @@ class ReactWebView extends Component {
     hideSpinner() {
         this.setState({ visible: false })
     }
+
+    
+
     componentDidMount = async () => {
 
         const { link } = this.props.navigation.state.params
-        this.props.navigation.setParams({ handleSave: this.saveDetails });
+        this.props.navigation.setParams({ handleSave: this.saveDetails, goBack: this.goBack, refreshHome: this.refreshHome });
         this.setState({ link: link })
          console.log('Device Info', DeviceInfo.getUserAgent(), 'linkWebView', link)
         await calculateRating()
@@ -153,6 +174,15 @@ class ReactWebView extends Component {
         });
     }
 
+    goBack = () =>{
+            this.refs[WEBVIEW_REF].goBack();
+    }
+    refreshHome = () => {
+        console.log('RefreshHome', this.props.navigation.state.params.link )
+        this.setState({ link: this.beginLink})
+        this.forceUpdate()
+    }
+
     render() {
         const { link } = this.state
         const { setRefs } = this
@@ -208,6 +238,7 @@ class ReactWebView extends Component {
                 <ViewShot ref={setRefs} options={{ format: 'jpg', quality: 1 }} style={styles.viewShot} collapsable={false}>
                     <StatusBar hidden={true} />
                     <WebView
+                        ref={WEBVIEW_REF}
                         onLoad={() => this.hideSpinner()}
                         userAgent={DeviceInfo.getUserAgent() + " - Coupons 24h Trending - android "}
                         javaScriptEnabled={true}
