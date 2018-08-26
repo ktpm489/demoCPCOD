@@ -69,7 +69,14 @@ class ReactWebView extends Component {
                     mixedContentMode={'compatibility'}
                     startInLoadingState={true}
                     onNavigationStateChange={this.setWebViewUrlChanged}
-                    source={{ uri: link }} />
+                    source={{ uri: link }} 
+                    decelerationRate="normal"
+                    scrollEnabled={true}
+                    // nativeConfig={true}
+
+
+                    automaticallyAdjustContentInsets={false}
+                    />
                 {/* {this.state.visible && (
                     <ActivityIndicator
                         style={{ position: "absolute", top: height / 2, left: width/2 }}

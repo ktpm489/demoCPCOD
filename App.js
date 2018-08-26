@@ -5,7 +5,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 import HomeView from './src/coupons'
 import CounponsDetail from './src/couponsDetail'
 import WebView from './src/webView'
-//import WebView from './src/webViewBK'
+// import WebView from './src/webViewBK'
 import { width} from 'react-native-dimension'
 import { StackNavHeaderStyles } from './styles/styles'
 const Stack = StackNavigator({

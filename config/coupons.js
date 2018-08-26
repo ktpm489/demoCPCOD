@@ -23,7 +23,7 @@ const coupons = [
         'title': 'Food',
         'link': require('../images/coupons/dish.png'),
         'data': [
-            { 'name': 'RetailMeNot - Food', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/food' },
+          
             { 'name': 'Coupons - Food', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/food-coupons-107/' },
             { 'name': 'Fruggaa - Food', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/food-and-beverage/' },
             { 'name': 'ShopAtHome - Food', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/food-and-wine-coupons' },
@@ -31,8 +31,8 @@ const coupons = [
             { 'name': 'Ebates - Food', 'link': require('../images/stores/ebates.jpeg'), 'url': 'https://www.ebates.com/food-restaurants' },
             { 'name': 'Saving - Food', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/food-and-beverage' },
             { 'name': 'FreeShipping - Food', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/food/' },
-            { 'name': 'Coupondunia - Food', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/food-and-dining/food-ordering' }
-
+            { 'name': 'Coupondunia - Food', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/food-and-dining/food-ordering' },
+            { 'name': 'RetailMeNot - Food', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/food' },
         ]
 
     },
@@ -40,7 +40,7 @@ const coupons = [
         'title': 'Travel',
         'link': require('../images/coupons/airplanes.png'),
         'data': [
-            { 'name': 'RetailMeNot - Travel', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/travel' },
+          
             { 'name': 'Coupons - Travel', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/travel-coupons-597/' },
             { 'name': 'Fruggaa - Travel', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/travel/' },
             { 'name': 'ShopAtHome - Travel', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/travel-hub' },
@@ -50,15 +50,15 @@ const coupons = [
             { 'name': 'Saving - Travel', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/travel' },
             { 'name': 'DealNews - Travel', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c206/Travel-Entertainment/' },
             { 'name': 'FreeShipping - Travel', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/travel/' },
-            { 'name': 'Coupondunia - Travel', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/travel' }
-
+            { 'name': 'Coupondunia - Travel', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/travel' },
+              { 'name': 'RetailMeNot - Travel', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/travel' },
         ]
     },
     {
         'title': 'Beauty',
         'link': require('../images/coupons/makeup.png'),
         'data': [
-            { 'name': 'RetailMeNot - Beauty', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/beauty' },
+            
             { 'name': 'Coupons - Beauty', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/personal-care-coupons-101/' },
             { 'name': 'Fruggaa - Beauty', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/beauty/' },
             { 'name': 'Groupon - Beauty', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/health-and-beauty' },
@@ -70,7 +70,8 @@ const coupons = [
             { 'name': 'DealNews - Beauty', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c756/Health-Beauty/' },
             { 'name': 'FreeShipping - Beauty', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/health-and-beauty/' },
             { 'name': 'Coupondunia - Beauty', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/beauty-and-health' },
-            { 'name': 'CashKaro - Beauty', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/health-beauty-products' }
+            { 'name': 'CashKaro - Beauty', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/health-beauty-products' },
+            { 'name': 'RetailMeNot - Beauty', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/beauty' }
         ]
 
     },
@@ -78,12 +79,13 @@ const coupons = [
         'title': 'Shoes',
         'link': require('../images/coupons/sneakers.png'),
         'data': [
-            { 'name': 'RetailMeNot - Shoes', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/shoes' },
+           
             { 'name': 'Fruggaa - Shoes', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/shoes/' },
             { 'name': 'ShopAtHome - Shoes', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/shoe-coupons' },
             { 'name': 'Ebates - Shoes', 'link': require('../images/stores/ebates.jpeg'), 'url': 'https://www.ebates.com/shoes-handbags' },
             { 'name': 'DealCatcher - Shoes', 'link': require('../images/stores/dealcatcher.jpeg'), 'url': 'https://www.dealcatcher.com/everything-else' },
-            { 'name': 'CashKaro - Shoes', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/shoes' }
+            { 'name': 'CashKaro - Shoes', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/shoes' },
+            { 'name': 'RetailMeNot - Shoes', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/shoes' }
         ]
 
     },
@@ -91,7 +93,7 @@ const coupons = [
         'title': 'Entertainment',
         'link': require('../images/coupons/film-strip.png'),
         'data': [
-            { 'name': 'RetailMeNot - Entertainment', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/entertainment' },
+            
             { 'name': 'Fruggaa - Entertainment', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/art-and-entertainment/' },
             { 'name': 'Groupon - Entertainment', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/entertainment-and-media' },
             { 'name': 'LivingSocial - Entertainment', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/entertainment-and-media' },
@@ -100,7 +102,8 @@ const coupons = [
             { 'name': 'DealCatcher - Entertainment', 'link': require('../images/stores/dealcatcher.jpeg'), 'url': 'https://www.dealcatcher.com/games-entertainment' },
             { 'name': 'Saving - Entertainment', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/arts-and-entertainment' },
             { 'name': 'FreeShipping - Entertainment', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/entertainment/' },
-            { 'name': 'CouponDunia - Entertainment', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/entertainment' }
+            { 'name': 'CouponDunia - Entertainment', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/entertainment' },
+            { 'name': 'RetailMeNot - Entertainment', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/entertainment' },
 
         ]
 
@@ -111,7 +114,6 @@ const coupons = [
         'data': [
             { 'name': 'Fruggaa - Electronics', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/electronics/' },
             { 'name': 'Coupons - Electronics', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/office-and-electronics-coupons-894/' },
-            { 'name': 'RetailMeNot - Electronics', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/electronics' },
             { 'name': 'Groupon - Electronics', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/electronics' },
             { 'name': 'LivingSocial - Electronics', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/electronics' },
             { 'name': 'ShopAtHome - Electronics', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/electronic-coupons' },
@@ -122,7 +124,8 @@ const coupons = [
             { 'name': 'Saving - Electronics', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/electronics' },
             { 'name': 'DealNews - Electronics', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c142/Electronics/' },
             { 'name': 'FreeShipping - Electronics', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/electronics/' },
-            { 'name': 'CashKaro - Electronics', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/electronics' }
+            { 'name': 'CashKaro - Electronics', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/electronics' },
+            { 'name': 'RetailMeNot - Electronics', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/electronics' },
         ]
 
     },
@@ -131,11 +134,11 @@ const coupons = [
         'link': require('../images/coupons/sunglasses.png'),
         'data': [
             { 'name': 'Frugaa - Accessories', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/accessories/' },
-            { 'name': 'RetailMeNot - Accessories', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/accessories' },
             { 'name': 'ShopAtHome - Accessories', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/accessories-coupons' },
             { 'name': 'Saving - Accessories', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/apparel-and-accessories' },
             { 'name': 'FreeShipping - Accessories', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/accessories/' },
             { 'name': 'CashKaro - Accessories', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/accessories-bags' },
+            { 'name': 'RetailMeNot - Accessories', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/accessories' },
         ]
 
     },
@@ -144,7 +147,6 @@ const coupons = [
         'link': require('../images/coupons/exercise.png'),
         'data': [
             { 'name': 'Frugaa - Sporting', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/sporting-goods/' },
-            { 'name': 'RetailMeNot - Sporting', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/sports' },
             { 'name': 'Groupon - Sporting', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/sports-and-outdoors' },
             { 'name': 'LivingSocial - Sporting', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/sports-and-outdoors' },
             { 'name': 'ShopAtHome - Sporting', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/sports-and-outdoor-coupons' },
@@ -154,6 +156,7 @@ const coupons = [
             { 'name': 'DealNews - Sporting', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c211/Sports-Fitness/' },
             { 'name': 'FreeShipping - Sporting', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/sporting-goods/' },
             { 'name': 'CouponDunia - Sporting', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/sports-and-fitness' },
+            { 'name': 'RetailMeNot - Sporting', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/sports' }
         ]
 
     },
@@ -161,7 +164,7 @@ const coupons = [
         'title': 'Home And Graden',
         'link': require('../images/coupons/house.png'),
         'data': [
-            { 'name': 'RetailMeNot - Home', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/homeandgarden' },
+            
             { 'name': 'Frugaa - Home', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/home-and-garden/' },
             { 'name': 'Groupon - Home', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/for-the-home' },
             { 'name': 'LivingSocial - Home', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/for-the-home' },
@@ -176,6 +179,7 @@ const coupons = [
             { 'name': 'FreeShipping - Home', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/home-and-garden/' },
             { 'name': 'CouponDunia - Home', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/home-furnishing-and-decor' },
             { 'name': 'CashKaro - Home', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/home-and-kitchen' },
+            { 'name': 'RetailMeNot - Home', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/homeandgarden' }
         ]
 
     },
@@ -184,12 +188,13 @@ const coupons = [
         'link': require('../images/coupons/dog.png'),
         'data': [
             { 'name': 'Frugaa - Pets', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/pets/' },
-            { 'name': 'RetailMeNot - Pets', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/pets' },
             { 'name': 'Groupon - Pets', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/pet-supplies' },
             { 'name': 'LivingSocial - Pets', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/pet-supplies' },
             { 'name': 'ShopAtHome - Pets', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/pet-coupons' },
             { 'name': 'FreeShipping - Pets', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/pet-supplies/' },
             { 'name': 'CouponDunia - Pets', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/miscellaneous' },
+            { 'name': 'RetailMeNot - Pets', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/pets' },
+
         ]
 
     },
@@ -198,7 +203,6 @@ const coupons = [
         'link': require('../images/coupons/baby.png'),
         'data': [
             { 'name': 'Frugaa - Baby', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/baby-and-kids/' },
-            { 'name': 'RetailMeNot - Baby', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/baby' },
             { 'name': 'Groupon - Baby', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/baby-kids-and-toys' },
             { 'name': 'Coupons - Baby', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/baby-and-toddler-coupons-5491/' },
             { 'name': 'ShopAtHome - Baby', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/babies-and-kids-coupons' },
@@ -207,6 +211,8 @@ const coupons = [
             { 'name': 'FreeShipping - Baby', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/baby/' },
             { 'name': 'CouponDunia - Baby', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/kids-babies-and-toys' },
             { 'name': 'CashKaro - Baby', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/babies-toys' },
+            { 'name': 'RetailMeNot - Baby', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/baby' },
+
         ]
 
     },
@@ -215,7 +221,6 @@ const coupons = [
         'link': require('../images/coupons/car.png'),
         'data': [
             { 'name': 'Coupons - Automotive', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/automotive-coupons-890/' },
-            { 'name': 'RetailMeNot - Automotive', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/auto' },
             { 'name': 'Frugaa - Automotive', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/automotive/' },
             { 'name': 'Groupon - Automotive', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/auto-and-home-improvement' },
             { 'name': 'ShopAtHome - Automotive', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/automotive-coupons' },
@@ -223,6 +228,8 @@ const coupons = [
             { 'name': 'Saving - Automotive', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/automotive' },
             { 'name': 'FreeShipping - Automotive', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/automotive/' },
             { 'name': 'CouponDunia - Automotive', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/automotive' },
+            { 'name': 'RetailMeNot - Automotive', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/auto' },
+            
         ]
 
     },
@@ -230,7 +237,6 @@ const coupons = [
         'title': 'Books',
         'link': require('../images/coupons/library.png'),
         'data': [
-            { 'name': 'RetailMeNot - Books', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/books' },
             { 'name': 'Frugaa - Books', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/books-music-video/' },
             { 'name': 'LivingSocial - Books', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/baby-kids-and-toys' },
             { 'name': 'ShopAtHome - Books', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/education-coupons' },
@@ -240,6 +246,8 @@ const coupons = [
             { 'name': 'FreeShipping - Books', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/books/' },
             { 'name': 'CouponDunia - Books', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/category/books-and-stationary' },
             { 'name': 'CashKaro - Books', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/books-and-media' },
+            { 'name': 'RetailMeNot - Books', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/books' },
+
         ]
 
     },
@@ -248,12 +256,13 @@ const coupons = [
         'link': require('../images/coupons/tulips.png'),
         'data': [
             { 'name': 'Frugaa - Flowers', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/flowers/' },
-            { 'name': 'RetailMeNot - Flowers', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/flowers' },
             { 'name': 'ShopAtHome - Flowers', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/flower-and-plant-coupons' },
             { 'name': 'Saving - Flowers', 'link': require('../images/stores/saving.jpeg'),  'url': 'https://www.savings.com/coupons/flowers-and-gifts' },
             { 'name': 'DealNews - Flowers', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c636/Special-Occasion/' },
             { 'name': 'FreeShipping - Flowers', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/flowers/' },
             { 'name': 'CouponDunia - Flowers', 'link': require('../images/stores/coupondunia.png'),'url': 'https://www.coupondunia.in/category/gifts-and-jewellery' },
+            { 'name': 'RetailMeNot - Flowers', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/flowers' },
+
         ]
 
     },
@@ -262,7 +271,6 @@ const coupons = [
         'link': require('../images/coupons/robot.png'),
         'data': [
             { 'name': 'Frugaa - Toys', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/toys/' },
-            { 'name': 'RetailMeNot - Toys', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/toys' },
             { 'name': 'Groupon - Toys', 'link': require('../images/stores/groupon.jpeg'), 'url': 'https://www.groupon.com/goods/toys' },
             { 'name': 'LivingSocial - Toys', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/toys' },
             { 'name': 'ShopAtHome - Toys', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/toys-and-games-coupons' },
@@ -270,6 +278,8 @@ const coupons = [
             { 'name': 'DealNews - Toys', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c186/Gaming-Toys/' },
             { 'name': 'FreeShipping - Toys', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/toys/' },
             { 'name': 'CashKaro - Toys', 'link': require('../images/stores/cashkaro.jpeg'), 'url': 'https://cashkaro.com/product/babies-toys' },
+            { 'name': 'RetailMeNot - Toys', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/toys' },
+
         ]
 
     },
@@ -278,22 +288,24 @@ const coupons = [
         'link': require('../images/coupons/camera.png'),
         'data': [
             { 'name': 'Frugaa - Photography', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/promo/photography/' },
-            { 'name': 'RetailMeNot - Photography', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/photo' },
             { 'name': 'Saving - Photography', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/photo-printing' },
             { 'name': 'FreeShipping - Photography', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/photography/' },
+            { 'name': 'RetailMeNot - Photography', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/photo' },
+
         ]
     },
     {
         'title': 'Gifts',
         'link': require('../images/coupons/gift.png'),
         'data': [
-            { 'name': 'RetailMeNot - Gifts', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/gifts' },
             { 'name': 'Coupons - Gifts', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupons/flower-and-gift-coupons-886/' },
             { 'name': 'LivingSocial - Gifts', 'link': require('../images/stores/livingsocial.jpeg'), 'url': 'https://www.livingsocial.com/goods/jewelry-and-watches' },
             { 'name': 'ShopAtHome - Gifts', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/savings/gifts-and-party-supply-coupons' },
             { 'name': 'Ebates - Gifts', 'link': require('../images/stores/ebates.jpeg'), 'url': 'https://www.ebates.com/flowers-gifts' },
             { 'name': 'DealNews - Gifts', 'link': require('../images/stores/dealnews.png'), 'url': 'https://www.dealnews.com/c859/Gift-Cards/' },
             { 'name': 'FreeShipping - Gifts', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/category/gifts/' },
+            { 'name': 'RetailMeNot - Gifts', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/coupons/gifts' },
+
         ]
 
     },
@@ -303,7 +315,6 @@ const coupons = [
         'data': [
             { 'name': 'Coupons - Store', 'link': require('../images/stores/coupons.png'), 'url': 'https://www.coupons.com/coupon-codes/stores/' },
             { 'name': 'Frugaa - Store', 'link': require('../images/stores/frugaa.png'), 'url': 'https://www.frugaa.com/stores/' },
-            { 'name': 'RetailMeNot - Store', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/sitemap/A' },
             { 'name': 'ShopAtHome - Store', 'link': require('../images/stores/shopathome.png'), 'url': 'https://www.shopathome.com/stores' },
             { 'name': 'SlickDeals - Store', 'link': require('../images/stores/slickdeals.png'), 'url': 'https://slickdeals.net/stores/alpha/' },
             { 'name': 'Ebates - Store', 'link': require('../images/stores/ebates.jpeg'), 'url': 'https://www.ebates.com/back-to-school-sales' },
@@ -311,6 +322,8 @@ const coupons = [
             { 'name': 'Saving - Store', 'link': require('../images/stores/saving.jpeg'), 'url': 'https://www.savings.com/coupons/stores' },
             { 'name': 'FreeShipping - Store', 'link': require('../images/stores/freeshipping.jpeg'), 'url': 'http://www.freeshipping.org/stores-with-free-shipping' },
             { 'name': 'CouponDunia - Store', 'link': require('../images/stores/coupondunia.png'), 'url': 'https://www.coupondunia.in/stores' },
+            { 'name': 'RetailMeNot - Store', 'link': require('../images/stores/retailmenot.jpeg'), 'url': 'https://www.retailmenot.com/sitemap/A' },
+
         ]
 
     }

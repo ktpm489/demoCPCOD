@@ -187,7 +187,7 @@ class ReactWebView extends Component {
         const { link } = this.state
         const { setRefs } = this
         return (
-            <TouchableWithoutFeedback onPress={this.closePopup}>
+            // <TouchableWithoutFeedback onPress={this.closePopup}>
             <View style={styles.container}>
                
                 {/* <Modal
@@ -235,13 +235,15 @@ class ReactWebView extends Component {
                             </TouchableOpacity>
                         </View>
                 </PopupDialog>
+                <TouchableWithoutFeedback onPress={this.closePopup}>
                 <ViewShot ref={setRefs} options={{ format: 'jpg', quality: 1 }} style={styles.viewShot} collapsable={false}>
+                  
                     <StatusBar hidden={true} />
                     <WebView
                         ref={WEBVIEW_REF}
                         style={{ flex: 1 , width: width(100) }}
                         onLoad={() => this.hideSpinner()}
-                        userAgent={DeviceInfo.getUserAgent() + " - Coupons 24h Trending - android "}
+                      //  userAgent={DeviceInfo.getUserAgent() + " - Coupons 24h Trending - android "}
                         javaScriptEnabled={true}
                         javaScriptEnabledAndroid={true}
                         domStorageEnabled={true}
@@ -253,6 +255,7 @@ class ReactWebView extends Component {
                         startInLoadingState={true}
                         onNavigationStateChange={this.setWebViewUrlChanged}
                         source={{ uri: link }} />
+                     
                     {/* {this.state.visible && (
                     <ActivityIndicator
                         style={{ position: "absolute", top: height / 2, left: width/2 }}
@@ -260,9 +263,10 @@ class ReactWebView extends Component {
                     />
                 )} */}
                 </ViewShot>
+                </TouchableWithoutFeedback>   
                
             </View>
-            </TouchableWithoutFeedback>
+            /* */
         )
     }
 }
@@ -275,7 +279,7 @@ const styles = StyleSheet.create({
     viewShot: {
         backgroundColor: 'transparent',
         width: width(100),
-       // paddingVertical: height(2),
+        paddingTop: height(2),
        // alignItems: 'center',
        // justifyContent: 'center',
         //flex: 1
