@@ -162,7 +162,7 @@ class ReactWebView extends Component {
     shareSocialNetwork = async () => {
        await this.closePopup()
         Share.share({
-            message: 'Share link webiste with your friend',
+            message: 'Share link webiste with your friend  ' + this.state.link,
             url: this.state.link,
             title: 'Wow, did you see that?'
         }).then(result => console.log(result)).catch(errorMsg => console.log(errorMsg));
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
     viewShot: {
         backgroundColor: 'transparent',
         width: width(100),
-        paddingTop: height(2),
+        paddingTop: height(4),
        // alignItems: 'center',
        // justifyContent: 'center',
         //flex: 1

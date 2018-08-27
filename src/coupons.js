@@ -79,7 +79,7 @@ class HelloWorld extends Component {
         <FlatList
           data={store}
           contentInsetAdjustmentBehavior={'automatic'}
-        contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center'  }}
+        contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center' , marginBottom : height(6) }}
           numColumns={3}
           renderItem={this.renderStoreItem}
           keyExtractor={(item, index) => index.toString()}
@@ -128,7 +128,7 @@ class HelloWorld extends Component {
       <FlatList
         data={coupons}
         contentInsetAdjustmentBehavior={'automatic'}
-        contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center' }}
+        contentContainerStyle={{ backgroundColor: 'transparent', alignItems: 'center', justifyContent: 'center', marginBottom : height(6) }}
         numColumns={3}
         renderItem={this.renderCouponItem}
         keyExtractor={(item, index) => index.toString()}
@@ -315,7 +315,8 @@ const styles = StyleSheet.create({
   },
   itemMainContainer: {
     // IOS : 63
-    height: height(ISIOS ? 63: 70)
+    height: height(ISIOS ? 63: 68),
+    paddingBottom:  height(9),
   },
   text: {
     color: '#444444'
