@@ -12,7 +12,7 @@ const store = [
     {
         "title": 'Coupons',
         "link": 'https://www.coupons.com/',
-        "linkImage": require('../images/stores/coupons.jpeg')
+        "linkImage": require('../images/stores/imgcoupons.jpeg')
     },
     {
         "title": 'Couponz Guru',
