@@ -21,6 +21,7 @@ const Stack = StackNavigator({
         fontWeight: 'bold',
         fontSize: width(4.5),
         width: '100%',
+        flex: 1,
         textAlign: 'center', alignSelf: 'center', justifyContent: "center", alignItems: 'center'
       },
     }
@@ -36,7 +37,8 @@ const Stack = StackNavigator({
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: width(4.5),
-        width: '100%',
+        flex: 1,
+       // width: '100%',
         textAlign: 'center', alignSelf: 'center', justifyContent: "center",alignItems: 'center',
       },
     }
