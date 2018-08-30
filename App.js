@@ -21,7 +21,7 @@ const Stack = StackNavigator({
         fontWeight: 'bold',
         fontSize: width(4.5),
         width: '100%',
-        textAlign: 'center', alignSelf: 'center', justifyContent: "center"
+        textAlign: 'center', alignSelf: 'center', justifyContent: "center", alignItems: 'center'
       },
     }
   },
@@ -37,7 +37,7 @@ const Stack = StackNavigator({
         fontWeight: 'bold',
         fontSize: width(4.5),
         width: '100%',
-        textAlign: 'center', alignSelf: 'center', justifyContent: "center",
+        textAlign: 'center', alignSelf: 'center', justifyContent: "center",alignItems: 'center',
       },
     }
     
@@ -54,7 +54,7 @@ const Stack = StackNavigator({
         fontWeight: 'bold',
         width: '100%',
         fontSize: width(4.5),
-        textAlign: 'center', alignSelf: 'center', justifyContent: "center"
+        textAlign: 'center', alignSelf: 'center', justifyContent: "center",alignItems: 'center'
       },
     }
   }
